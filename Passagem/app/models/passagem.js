@@ -2,6 +2,10 @@ var mongoose = require('mongoose');
 
 var schema = mongoose.Schema({
 
+   destino: {
+    type: String,
+    require: true
+  },
   data_ida: {
     type: String,
     requred: true
@@ -10,11 +14,7 @@ var schema = mongoose.Schema({
     type: String,
     require: true
   },
-  local: {
-    type: String,
-    require: true
-  },
-  asscento: {
+  lugar: {
     type: String,
     require: true
   },
