@@ -1,0 +1,17 @@
+{
+  "name": "front",
+  "homepage": "https://github.com/rafaelvicio/checkin_digital",
+  "authors": [
+    "Rafael Vicio <rafaelvicio@icloud.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
