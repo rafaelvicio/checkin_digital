@@ -3,6 +3,16 @@ angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResourc
 
 		$locationProvider.html5Mode(true);
 
+		$routeProvider.when('/', {
+			templateUrl: 'partials/index.html',
+			controller: 'HosedagemController',
+		});
+
+		$routeProvider.when('/cadastro', {
+			templateUrl: 'partials/cadastro.html',
+			controller: 'HosedagemController',
+		});
+
 		$routeProvider.when('/fotos', {
 			templateUrl: 'partials/principal.html',
 			controller: 'FotosController'
@@ -18,6 +28,6 @@ angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResourc
 			controller: 'FotoController'
 		});
 
-		$routeProvider.otherwise({redirectTo: '/fotos'});
+		$routeProvider.otherwise({redirectTo: '/'});
 
 	});
