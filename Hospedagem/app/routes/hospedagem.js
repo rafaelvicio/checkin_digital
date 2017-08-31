@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-  var api = app.api.passagem;
+  var api = app.api.hospedagem;
 
   app.route('/v1/api/hospedagems')
     .get(api.lista)
