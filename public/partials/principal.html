@@ -1,0 +1,61 @@
+<p ng-show="mensagem.length" class="alert alert-info">
+	{{mensagem}}
+</p>
+
+<div class="row">
+	<div class="col-md-12">
+		<form>
+			<div class="input-group">
+				<span class="input-group-btn">
+					<a href="/#/hospedagems/cadastro" class="btn btn-primary" type="button">
+						Nova reserva
+					</a>
+				</span>
+				<input class="form-control" placeholder="filtrar pelo destino da reserva" 
+					ng-model="filtro" ng-model-options="{ debounce: 500 }">
+		</form>
+	</div> <!-- fim col-md-12 -->
+</div> <!-- fim row -->
+
+</br>
+</br>
+
+<div class="row">
+	<div class="col-md-12">
+			<table class="table table-hover">
+				<thead>
+					 <tr>
+						<th>#</th>
+						<th>Destino</th>
+						<th>Data entrada</th>
+						<th>Data saida</th>
+						<th>Tipo</th>
+						<th>Editar</th>
+						<th>Excluir</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="hospedagem in hospedagems">
+						<th>{{hospedagem._id}}</th>
+						<th>{{hospedagem.destino}}</th>
+						<th>{{hospedagem.data_entrada}}</th>
+						<th>{{hospedagem.data_saida}}</th>
+						<th>{{hospedagem.tipo}}</th>
+						<th><button type="button" class="btn btn-primary btn-sm">Editar</button></th>
+						<th><button type="button" class="btn btn-danger btn-sm">Excluir</button></th>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+</div>
+
+<div class="row">
+    <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
+        <minha-foto url="{{foto.url}}" alt="{{foto.titulo}}"></minha-foto>
+
+		<a class="btn btn-primary btn-block" href="/#/fotos/edit/{{foto._id}}">
+			Editar
+		</a>
+		<meu-botao-perigo nome="Remover" acao="remover(foto)">Remover</meu-botao-perigo>
+    </meu-painel>
+</div>
