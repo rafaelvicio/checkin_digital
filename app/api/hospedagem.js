@@ -48,7 +48,6 @@ module.exports = function(app) {
 		.then(function(hospedagem) {
 			res.json(hospedagem);
 		}, function(error) {
-			console.log('não conseguiu');
 			console.log(error);
 			res.sendStatus(500);
 		});

@@ -19,7 +19,7 @@ var schema = mongoose.Schema({
         require: true
       },
       valor: {
-        type: Number
+        type: String
       }
     
 });

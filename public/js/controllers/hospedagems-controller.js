@@ -10,6 +10,11 @@ angular.module('alurapic').controller('HospedagemsController', function($scope, 
 		console.log(erro);
 	});
 
+	if($scope.hospedagem = []){
+		console.log($scope.hospedagem)
+        $scope.mensagem = 'Não existem reservas!';
+    }
+
 	$scope.remover = function(hospedagem) {
 
 		recursoHospedagem.delete({hospedagemId: hospedagem._id}, function() {
